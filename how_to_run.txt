@@ -1,0 +1,41 @@
+نحوه اجرا (لوکال) :
+مطمئن شو Docker و Docker Compose نصب هست. و docker desktop در حال اجرا هست .
+docker -v
+docker-compose -v
+
+
+دستورها:
+dir                           #بررسی مسیر و فایل های موجود در مسیر پروژه . خیلی مهمه که داکرفایلت موجود باشه در این مسیر
+cd "C:\Users\IT\Desktop\New folder\update_9_shahrivar\Final_Progect_FastAPI_APP"    #تغییر مسیر به پوشه پزوژه
+
+docker-compose down           #اگر قبلا کانتینر یا ایمیجی ساختی
+docker-compose up -d --build  #ساخت و اجرای همزمان ایمیج و کانتینر
+docker rm -----               #دستور پاک کردن
+
+docker-compose up -d --build --force-recreate   # دستور ساختن مجدد کانتیر ها با ساخت اجباری (یعنی اگر از قبل هم کانتینری موجوده از اول دوباره بسازش)
+docker compose ps             #دستور بررسی ایمیج ها (سرویس های) ساخته شده در کانتینر مون
+
+docker compose stop           #توقف داکر بدون حذف ایمیج ها
+
+
+تست مرورگر:
+باز کردن مرورگر و رفتن به http://localhost → صفحه‌ی HTML لود میشه.
+
+API روی /run در دسترسه.
+
+WebSocket روی /ws/logs کار می‌کنه.
+
+
+
+دیپلوی روی سرور
+روی VPS (مثلاً Ubuntu):
+
+Docker و docker-compose نصب کن.
+
+کد پروژه رو با git clone یا scp بیار.
+
+همین دستور docker-compose up -d رو بزن.
+
+اگر دامنه داری، رکورد A رو به IP سرور وصل کن.
+
+برای HTTPS می‌تونی از nginx-certbot یا Caddy استفاده کنی.

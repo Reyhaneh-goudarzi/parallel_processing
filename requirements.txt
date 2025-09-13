@@ -1,0 +1,6 @@
+# نیاز داریم به این پکیج‌ها:
+fastapi
+uvicorn[standard]
+
+# (ماژول‌هایی مثل multiprocessing, threading, asyncio, logging, sys, io, queue
+#همگی جزو کتابخونه‌های استاندارد پایتون هستن و نیازی به نصب ندارن.)
